@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="main-content">
+		<div class="page-content">
+			<div class="container-fluid">
+
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title mb-0">Tunisia Summer Program Student</h4>
+							</div>
+							<div class="card-body">
+								<div class="row">
+
+									<form action="{{ path('app_validate',{'id':user.id}) }}" method="POST">
+										<div class="form-group">
+											<label for="stauts">Status</label>
+											<select class="form-select" id="select-status" name="select-status" required>
+												<option value="approuve">Approuvé</option>
+												<option value="refuse">Refusé</option>
+											</select>
+										</div>
+										<input type="hidden" value="{{user.id}}" name="iduser" id="iduser"/>
+
+										<div class="form-group">
+											<label for="commentaire">Commentaire</label>
+											<textarea class="form-control" id="commentaire" name="commentaire" rows="3"></textarea>
+										</div>
+										<input type="submit" class="btn btn-lg btn-primary" value="save"/>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Tunisia Summer Program Student | University of Carthage</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta content="Premium Multipurpose Admin & Dashboard Template" name="description"/>
+		<meta
+		content="Themesbrand" name="author"/>
+		<!-- App favicon -->
+
+		{% block stylesheets %}
+			<style>
+				table.dataTable tbody tr {
+					background-color: #ffffff;
+					border: 0 solid #eff0f2;
+				}
+				table.dataTable thead th,
+				table.dataTable thead td {
+					padding: 10px 18px;
+					border-bottom: 0 solid #eff0f2 !important;
+				}
+				table.dataTable.no-footer {
+					border-bottom: none !important;
+				}
+				input[type="search"] {
+					border-color: #e2e5e8;
+					color: #545965;
+					border-radius: 30px;
+					-moz-appearance: none;
+					appearance: none;
+					background-color: #fff;
+					border: 1px solid #d2d6dc;
+					font-size: 14px;
+					line-height: 1.45;
+					outline: none;
+					padding: 8px 13px;
+				}
+				button.dt-button,
+				div.dt-button,
+				a.dt-button {
+					color: #fff !important;
+					background-color: #3b76e1 !important;
+					border-color: #3b76e1 !important;
+					border-radius: 30px !important;
+					background-image: none !important;
+				}
+			</style>
+			<link
+			rel="shortcut icon" href="{{ asset('public/assets/images/favicon.ico') }}">
+
+			<!-- Bootstrap Css -->
+			<link
+			rel="stylesheet" href="{{ asset('public/assets/css/bootstrap.min.css') }}" id="bootstrap-style" type="text/css"/>
+			<!-- Icons Css -->
+			<link rel="stylesheet" href="{{ asset('public/assets/css/icons.min.css') }}" type="text/css"/>
+			<link
+			rel="stylesheet" href="{{ asset('public/assets/css/app.min.css') }}" id="app-style" type="text/css"/>
+			<!-- datatable -->
+			<link rel='stylesheet' href="{{ asset('https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css') }}">
+			<link rel='stylesheet' href="{{ asset('https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css') }}">
+		{% endblock %}
+
+		{% block javascripts %} <script src='https://code.jquery.com/jquery-1.12.3.js'></script>
+			<!-- datatable -->
+			 <script src='https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js'></script>
+			 <script src='https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js'></script>
+			 <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js'></script>
+			 <script src='https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js'></script>
+			 <script src='https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js'></script>
+			 <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js'></script>
+			 <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js'></script>
+
+			 <script src="{{ asset('public/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+			 <script src="{{ asset('public/assets/libs/metismenujs/metismenujs.min.js') }}"></script>
+			 <script src="{{ asset('public/assets/libs/simplebar/simplebar.min.js') }}"></script>
+			 <script src="{{ asset('public/assets/libs/eva-icons/eva.min.js') }}"></script>
+			 <script src="{{ asset('public/assets/js/pages/pass-addon.init.js') }}"></script>
+			 <script src="{{ asset('public/assets/js/pages/eva-icon.init.js') }}"></script>
+			 <script>
+																											$(document).ready(function() {
+																					    $('#example').DataTable( {
+																					        dom: 'Bfrtip',
+																					        buttons: [
+																					            'copy', 'excelFlash', 'excel', 'pdf', 'print',{
+																					            text: 'Reload',
+																					            action: function ( e, dt, node, config ) {
+																					                dt.ajax.reload();
+																					            }
+																					        }
+																					        ]
+																					    } );
+																					} );
+																											</script>
+		{% endblock %}
+	</head>
+	<body>
+
+
+		{% block body %}{% endblock %}
+	</body>
+</html>

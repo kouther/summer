@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Your PDF Title</title>
+	</head>
+	<body>
+		<table style="border-bottom: 20px solid #1d5394;">
+			<thead>
+				<tr></tr>
+				<tr>
+					<td style="border-top: 20px solid #1d5394;"><img src="public/assets/images/logo-ucar.png" style="width:75%;" alt="ucar"></td>
+					<td><img src="https://www.avila.edu/wp-content/themes/avila/img/logo-one-line-no-tag.svg" style="width:200px;padding:2%;"></td>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr>
+					<td colspan="2">
+						<h5 class="font-size-18 mb-2" style="text-align:center;">Tunisia Summer Program Student</h5>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="qrcode"></div>
+					</td>
+					<td>
+						<div class="text-muted">
+							<p class="mb-1">First name:
+								<span id="firstname">{{ user.firstname }}</span>
+							</p>
+							<p class="mb-1">Last name:
+								<span id="lastname">{{ user.lastname }}</span>
+							</p>
+							<p class="mb-1">University:
+								{{ user.getUniversityName()}}</p>
+
+
+						</div>
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+	<script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+	<script>
+				   var name = document.getElementById('firstname').textContent;
+				   var lastname = document.getElementById('lastname').textContent;
+			   console.log(name);
+				   
+					   var qr = new QRCode(document.getElementById('qrcode'), {
+						   text: name + " " + lastname,
+						   width: 100,
+						   height: 100,
+						   colorDark: "#000000",
+						   colorLight: "#ffffff",
+						   correctLevel: QRCode.CorrectLevel.M
+					   });
+				   </script>
+	</body>
+</html>

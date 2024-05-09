@@ -1,0 +1,179 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<style>
+.form-check-input{
+    float: inline-start;
+}
+label.form-check-label.required {
+    display: none;
+}
+label {
+    display: flex;
+    margin-bottom: 2%;
+}
+td {
+    padding: 2%;
+}
+</style>
+
+	<div class="main-content">
+		<div class="page-content">
+			<div class="container-fluid">
+
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title mb-0">Tunisia Summer Program Student Form</h4>
+							</div>
+							<div class="card-body">
+								<div class="row">
+									<h5 class="font-size-14 mb-4">
+										<i class="mdi mdi-arrow-right text-primary me-1"></i>
+										Contact information</h5>
+
+									<div class="col-lg-5">
+										<div class="mt-4 mt-xl-0">
+											{{ form_start(ProgramForm) }}
+
+											<div class="mb-3">
+												<label class="form-label" for="formrow-firstname-input">First Name</label>
+												{{ form_row(ProgramForm.firstname) }}
+											</div>
+
+											<div class="row">
+												<div class="mb-3">
+													<label class="form-label" for="formrow-email-input">Email</label>
+													{{ form_row(ProgramForm.email) }}
+												</div>
+
+											</div>
+
+
+										</div>
+									</div>
+									<div class="col-lg-6 ms-lg-auto">
+										<div class="mt-5 mt-lg-4 mt-xl-0">
+											<h5 class="font-size-14 b-4"></h5>
+											<div class="mb-3">
+												<label class="form-label" for="formrow-firstname-input">Last name</label>
+
+
+												{{ form_row(ProgramForm.lastname) }}
+
+											</div>
+											<div class="mb-3">
+												<label class="form-label" for="formrow-firstname-input">Phone</label>
+												{{ form_row(ProgramForm.phone) }}
+
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+
+								<div class="mt-4">
+									<h5 class="font-size-14 mb-4">
+
+
+										<div class="mb-3">
+											<label class="form-label" for="formrow-firstname-input">University name</label>
+											{{ form_row(ProgramForm.university_name) }}
+										</div>
+										<div class="row">
+										    <div class="col-md-7">
+										        <div class="mb-3">
+												<div>
+											        <label class="form-label" for="formrow-firstname-input">Course of interest</label><br>
+											        {{ form_row(ProgramForm.interesrt_course) }}
+										        </div>
+												</div>
+										    </div>
+										
+										    <div class="col-md-5">
+										        <table id="displayTable">
+										        	<thead>
+											           	<tr>
+														<th>Order</th>
+												        	<th>Selected Options</th>
+											        	</tr>
+										        	</thead>
+											        <tbody>
+												   
+											        </tbody>
+										        </table>
+										    </div>
+										</div>
+
+										<div class="mb-3">
+											<label class="form-label" for="formrow-firstname-input">Payment date</label>
+											{{ form_row(ProgramForm.payment_date) }}
+										</div>
+										<div class="mb-3">
+											<label class="form-label" for="formrow-firstname-input">Payment receipt number</label>
+											{{ form_row(ProgramForm.payment_id) }}
+										</div>
+
+										<div class="mb-3">
+											<label class="form-label" for="formrow-firstname-input">Download payment receipt( image or pdf file)</label>
+											{{ form_row(ProgramForm.payment) }}
+										</div>
+
+
+									</div>
+									<button type="submit" class="btn btn-primary w-100 waves-effect waves-light">Register</button>
+
+									{{ form_end(ProgramForm) }}
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+    let maxAllowed = 4;
+    document.querySelectorAll('.choice').forEach(item => {
+        item.addEventListener('change', function() {
+            let checkedCount = document.querySelectorAll('.choice:checked').length;
+			console.log("+++++++++",checkedCount);
+            if (checkedCount > maxAllowed) {
+                alert('Vous avez 4 choix au maximum');
+                this.checked = false;
+            }
+        });
+    });
+</script>
+
+	</script>
+	<script>
+	        const checkboxes = document.querySelectorAll('input[type="checkbox"   ]');
+	        const displayTable = document.getElementById('displayTable').getElementsByTagName('tbody')[0];
+	
+	        checkboxes.forEach(checkbox => {
+	            checkbox.addEventListener('change', function() {
+	                updateTable();
+	            });
+	        });
+	
+	     function updateTable() {
+    const selectedOptions = Array.from(checkboxes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value);
+
+  displayTable.innerHTML = ''; // Clear the table body
+
+            for (let i = 0; i < selectedOptions.length; i++) {
+                displayTable.innerHTML += `<tr><td>${i + 1}</td><td>${selectedOptions[i]}</td></tr>`;
+            }
+}
+
+	    </script>
+
+{% endblock %}

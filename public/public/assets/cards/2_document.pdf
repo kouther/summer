@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Tunisia Summer Program Student | University of Carthage</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta content="Premium Multipurpose Admin & Dashboard Template" name="description"/>
+		<meta
+		content="Themesbrand" name="author"/>
+		<!-- App favicon -->
+
+					<style>
+				table.dataTable tbody tr {
+					background-color: #ffffff;
+					border: 0 solid #eff0f2;
+				}
+				table.dataTable thead th,
+				table.dataTable thead td {
+					padding: 10px 18px;
+					border-bottom: 0 solid #eff0f2 !important;
+				}
+				table.dataTable.no-footer {
+					border-bottom: none !important;
+				}
+				input[type="search"] {
+					border-color: #e2e5e8;
+					color: #545965;
+					border-radius: 30px;
+					-moz-appearance: none;
+					appearance: none;
+					background-color: #fff;
+					border: 1px solid #d2d6dc;
+					font-size: 14px;
+					line-height: 1.45;
+					outline: none;
+					padding: 8px 13px;
+				}
+				button.dt-button,
+				div.dt-button,
+				a.dt-button {
+					color: #fff !important;
+					background-color: #3b76e1 !important;
+					border-color: #3b76e1 !important;
+					border-radius: 30px !important;
+					background-image: none !important;
+				}
+			</style>
+			<link
+			rel="shortcut icon" href="/public/assets/images/favicon.ico">
+
+			<!-- Bootstrap Css -->
+			<link
+			rel="stylesheet" href="/public/assets/css/bootstrap.min.css" id="bootstrap-style" type="text/css"/>
+			<!-- Icons Css -->
+			<link rel="stylesheet" href="/public/assets/css/icons.min.css" type="text/css"/>
+			<link rel="stylesheet" href="/public/assets/css/app.min.css" id="app-style" type="text/css"/>
+			<link rel="stylesheet" href="/public/assets/libs/flatpickr/flatpickr.min.css">
+
+			<!-- datatable -->
+			<link rel='stylesheet' href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+			<link rel='stylesheet' href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css">
+		
+		 <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+			<!-- datatable -->
+			 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+			 <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+			 <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+			 <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+			 <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+			 <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+			 <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+
+			 <script src="/public/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+			 <script src="/public/assets/libs/metismenujs/metismenujs.min.js"></script>
+			 <script src="/public/assets/libs/simplebar/simplebar.min.js"></script>
+			 <script src="/punlic/assets/libs/eva-icons/eva.min.js"></script>
+			 <script src="/public/assets/js/pages/pass-addon.init.js"></script>
+			 <script src="/public/assets/js/pages/eva-icon.init.js"></script>
+			      
+        <!-- color picker js -->
+        <script src="/public/assets/libs/%40simonwep/pickr/pickr.min.js"></script>
+        <script src="/public/assets/libs/%40simonwep/pickr/pickr.es5.min.js"></script>
+
+        <!-- datepicker js -->
+        <script src="/public/assets/libs/flatpickr/flatpickr.min.js"></script>
+
+        <!-- init js -->
+        <script src="/public/assets/js/pages/form-advanced.init.js"></script>
+
+			 <script>
+																								$(document).ready(function() {
+																		    $('#example').DataTable( {
+																		        dom: 'Bfrtip',
+																		        buttons: [
+																		            'copy', 'excelFlash', 'excel', 'pdf', 'print',{
+																		            text: 'Reload',
+																		            action: function ( e, dt, node, config ) {
+																		                dt.ajax.reload();
+																		            }
+																		        }
+																		        ]
+																		    } );
+																		} );
+																								</script>
+			</head>
+	<body class="" data-topbar="dark" data-layout="horizontal">
+
+
+		<div id="layout-wrapper">
+			<header id="page-topbar" class="ishorizontal-topbar" style="display: block;background: #fff;">
+                <div class="navbar-header">
+                    <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box">
+                            <a href="index.html" class="logo logo-dark">
+                                <span class="logo-sm">
+									<img src="/public/assets/images/logo-avila.png" style="width:35%;" alt="ucar">
+                                </span>
+                                <span class="logo-lg">
+									<img src="/public/assets/images/logo-avila.png" style="width:35%;" alt="ucar">
+                                </span>
+                            </a>
+
+                            <a href="index.html" class="logo logo-light">
+                                <span class="logo-sm">
+									<img src="/public/assets/images/logo-avila.png" style="width:35%;" alt="ucar">
+                                </span>
+                                <span class="logo-lg">
+									<img src="/public/assets/images/logo-avila.png" style="width:35%;" alt="ucar">
+                                </span>
+                            </a>
+                        </div>
+
+                        <button type="button" class="btn btn-sm px-3 font-size-16 d-lg-none header-item" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
+                            <i class="fa fa-fw fa-bars"></i>
+                        </button>
+
+                       
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="dropdown">
+                            <button type="button" class="btn header-item" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="eva eva-search-outline icon-sm"><g data-name="Layer 2"><g data-name="search"><rect width="24" height="24" opacity="0"></rect><path d="M20.71 19.29l-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z"></path></g></g></svg>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-0">
+                                <form class="p-2">
+                                    <div class="search-box">
+                                        <div class="position-relative">
+                                            <input type="text" class="form-control bg-light border-0" placeholder="Search...">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" class="eva eva-search-outline search-icon"><g data-name="Layer 2"><g data-name="search"><rect width="24" height="24" opacity="0"></rect><path d="M20.71 19.29l-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z"></path></g></g></svg>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                       
+                       
+
+
+                       
+
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item user text-start d-flex align-items-center" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<strong style="color:#000;">....</strong>                            </button>
+                            <div class="dropdown-menu dropdown-menu-end pt-0">
+                                <div class="p-3 border-bottom">
+                                    <h6 class="mb-0">kawtherjlassi</h6>
+                                    <p class="mb-0 font-size-11 text-muted">kawther.jlassi@ucar.tn</p>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-lifebuoy text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Help</span></a>
+                                <a class="dropdown-item d-flex align-items-center" href="#"><i class="mdi mdi-cog-outline text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Settings</span><span class="badge badge-soft-success ms-auto">New</span></a>
+                                <a class="dropdown-item" href="/logout"><i class="mdi mdi-logout text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Logout</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </header>
+			
+	
+								<table style="border-bottom: 20px solid #1d5394;">
+									<thead>
+										<tr></tr>
+										<tr>
+											<td style="border-top: 20px solid #1d5394;"><img src="/public/assets/images/logo-ucar.png" style="width:75%;" alt="ucar"></td>
+											<td><img src="https://www.avila.edu/wp-content/themes/avila/img/logo-one-line-no-tag.svg" style="width:200px;padding:2%;"></td>
+										</tr>
+									</thead>
+									<tbody>
+
+										<tr>
+											<td colspan="2">
+												<h5 class="font-size-18 mb-2" style="text-align:center;">Tunisia Summer Program Student</h5>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div id="qrcode"></div>
+											</td>
+											<td>
+												<div class="text-muted">
+													<p class="mb-1">First name:
+														<span id="firstname">kawther</span>
+													</p>
+													<p class="mb-1">Last name:
+														<span id="lastname">jlassi</span>
+													</p>
+													<p class="mb-1">University:
+														university of Carthage</p>
+
+
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+				
+<script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+ <script>
+				var name = document.getElementById('firstname').textContent;
+			    var lastname = document.getElementById('lastname').textContent;
+		    console.log(name);
+				
+				    var qr = new QRCode(document.getElementById('qrcode'), {
+				        text: name + " " + lastname,
+				        width: 100,
+				        height: 100,
+				        colorDark: "#000000",
+				        colorLight: "#ffffff",
+				        correctLevel: QRCode.CorrectLevel.M
+				    });
+				</script>
+		</div>
+	</body>
+</html>
