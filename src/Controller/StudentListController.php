@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+
 use Dompdf\Dompdf;
 use Dompdf\Options;
 use App\Repository\UserRepository;
@@ -41,10 +42,18 @@ class StudentListController extends AbstractController
 
 
             if ($status == "approuve") {
-                
+                $pdfOptions = new Options();
+                $pdfOptions->set('defaultFont', 'Arial');
+                $dompdf = new Dompdf($pdfOptions);
                 $html = $this->renderView('generate_card/index.html.twig', [
                     'user' => $user,
                 ]);
+                $dompdf->loadHtml($html);
+                $dompdf->setPaper('A4', 'portrait');
+                $dompdf->render();
+                $output = $dompdf->output();
+
+
                 $email = (new Email())
                     ->from('contact@bmsconstruction.fr')
                     ->to($user->getEmail())

@@ -2,9 +2,6 @@ home:
   path: /
   controller: App\Controller\SecurityController::login
 
-app_validate:
-    path: '/student/{id}'
-    controller: 'App\Controller\StudentListController::validate'
-    methods: ['GET', 'POST']
+
 
 
